@@ -66,15 +66,10 @@ Set up the project foundation to manage infrastructure using modular and product
 
    Created Folder Structure
 
-bash
-Copy
-Edit
-mkdir -p modules/network dev prod shared
-Created Backend Config (dev/backend.tf)
+    mkdir -p modules/network dev prod shared
 
-hcl
-Copy
-Edit
+    Created Backend Config (dev/backend.tf)
+
 terraform {
   backend "azurerm" {
     resource_group_name  = "tfstate-rg"
@@ -83,12 +78,12 @@ terraform {
     key                  = "dev.terraform.tfstate"
   }
 }
+
+
+
 Created Variables and Provider
 dev/variables.tf
 
-h
-Copy
-Edit
 variable "location" {
   default = "eastus"
 }
@@ -98,28 +93,22 @@ variable "env" {
 }
 dev/providers.tf
 
-hcl
-Copy
-Edit
 provider "azurerm" {
   features {}
 }
 Committed and Pushed to GitHub
-
-bash
-Copy
-Edit
 git add .
 git commit -m "Initial structure with backend and provider setup"
 git push origin main
+
 📦 Next Steps
-Week 1 - Task 2: Implement Hub-Spoke Virtual Networks using modules.
+###Week 1 - Task 2: Implement Hub-Spoke Virtual Networks using modules.
 
-Week 2: Deploy Azure VMs, NSGs, Bastion Host.
+###Week 2: Deploy Azure VMs, NSGs, Bastion Host.
 
-Week 3: Add Firewall, SQL DB, Monitoring.
+###Week 3: Add Firewall, SQL DB, Monitoring.
 
-Week 4: Add CI/CD using GitHub Actions, Workspaces, and Policies.
+###Week 4: Add CI/CD using GitHub Actions, Workspaces, and Policies.
 
 
 
