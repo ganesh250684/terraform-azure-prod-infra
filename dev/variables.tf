@@ -30,4 +30,21 @@ variable "admin_password" {
   type        = string
   sensitive   = true
 }
+variable "env" {
+  description = "Enviornment"
+  type        = string
+  default = "dev"
+}
+
+
+variable "db_admin" {
+  description = "Admin username for the VM"
+  type        = string
+}
+
+variable "db_password" {
+  description = "Admin password for the VM"
+  type        = string
+  sensitive   = true
+}
 
